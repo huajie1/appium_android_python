@@ -81,6 +81,26 @@ def get_apkinfo():
     print "The package name is "+package_name
     print "The lanuch activity is "+launch_activity
 
+
+# 第五次课:当你的电脑连接着两台设备时，自动获取第一台设备，使用adb进行安装卸载操作
+def get_first_device():
+    print "start install apk to the appointed device"
+    path = "/Users/huajie/Desktop/txt_test.apk"
+    # 列出所有的device
+    devices = os.popen("adb devices").read()
+    # 根据空格分割取出第一个device id
+    first_device_id = devices.split()[4]
+    # 指定id设备上进行安装和卸载
+    os.popen("adb -s "+first_device_id+" install "+path)
+    time.sleep(5)
+    # 进行device的操作也需要-s指定设备
+    os.popen("adb -s "+first_device_id+" shell input keyevent 3")
+    time.sleep(3)
+    # 卸载
+    os.popen("adb -s "+first_device_id+" uninstall com.pingan.wetalk")
+    time.sleep(3)
+
+
 if __name__ == '__main__':
-    get_apkinfo()
+    get_first_device()
     print "Finished"
