@@ -13,4 +13,8 @@ appium_android_python 学习
 5.push jar 包到手机(放到tmp目录下执行时不用指定包的路径了)  
 ```adb push <生成的你的jar包路径>  /data/local/tmp/```  
 6.执行测试用例  
-```adb shell uiautomator runtest <你的jar包名.jar> -c <包名.类名#方法名>```
+```adb shell uiautomator runtest <你的jar包名.jar> -c <包名.类名#方法名>```  
+
+二、python的学习
+
+代码注释已经写的很清楚了，略
