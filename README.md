@@ -17,5 +17,5 @@ appium_android_python 学习
 
 二、python的学习&脚本编写
 
-python.py:代码注释已经写的很清楚了，如要参考，请修改apk包路径、包名即可
+python.py:代码注释已经写的很清楚了，如要参考，请修改apk包路径、包名即可  
 test_login.py:简单实现启动、登录，如要参考，app/路径下放本人的测试apk，修改设备信息、包名、启动activity即可.
