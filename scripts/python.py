@@ -2,6 +2,8 @@
 import os
 import time
 
+import common
+
 
 # 第二节课1:检测是否安装某应用,如果安装输出路径,否则执行安装
 def get_path():
@@ -101,6 +103,13 @@ def get_first_device():
     time.sleep(3)
 
 
+# 第6次课:点击某个坐标(100,100)
+def tap_point():
+    print "Start tap setting"
+    # 调用公共方法点击"设置"按钮的坐标
+    common.click_by_adb(700, 2200)
+
+
 if __name__ == '__main__':
-    get_first_device()
+    tap_point()
     print "Finished"
