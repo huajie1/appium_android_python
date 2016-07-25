@@ -103,7 +103,7 @@ def get_first_device():
     time.sleep(3)
 
 
-# 第6次课:点击某个坐标(100,100)
+# 第6次课:封装一个点击某个坐标的方法
 def tap_point():
     print "Start tap setting"
     # 调用公共方法点击"设置"按钮的坐标
