@@ -45,9 +45,9 @@ def wait_appear_by_id(self, id, timeout):
     WebDriverWait(self.driver, timeout).until(lambda driver: driver.find_element_by_id(id), "E\元素未出现")
 
 
-def wait_appear_by_classname(self, classname, timeout):
+def wait_appear_by_class_name(self, class_name, timeout):
     print "wait element appear"
-    WebDriverWait(self.driver, timeout).until(lambda driver: driver.find_element_by_class_name(classname), "E\元素未出现")
+    WebDriverWait(self.driver, timeout).until(lambda driver: driver.find_element_by_class_name(class_name), "E\元素未出现")
 
 
 def wait_appear_by_xpath(self, xpath, timeout):
@@ -64,8 +64,3 @@ def wait_appear_by_name(self, name, timeout):
 def wait_disappear_by_id(self, id, timeout):
     print "wait element appear"
     WebDriverWait(self.driver, timeout).until_not(lambda driver: driver.find_element_by_id(id), "E\元素未消失")
-
-
-
-
-
